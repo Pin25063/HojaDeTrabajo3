@@ -26,7 +26,7 @@ public class Main {
                 }
             }
 
-            System.out.println("Se cargaron " + arr.length + " numeros.");
+            System.out.println("Se cargaron " + pos + " numeros.");
 
             Integer[] arrParaGnome = arr.clone();
             sorter.gnomeSort(arrParaGnome);
@@ -35,6 +35,10 @@ public class Main {
             Integer[] arrParaInsertion = arr.clone();
             sorter.insertionSort(arrParaInsertion);
             sorter.insertionSort(arrParaInsertion);
+
+            Integer[] arrParaMerge = arr.clone();
+            sorter.mergeSort(arrParaMerge);
+            sorter.mergeSort(arrParaMerge);
 
             System.out.println("Ordenamiento terminado.");
 
