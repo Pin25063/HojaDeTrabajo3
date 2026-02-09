@@ -40,6 +40,10 @@ public class Main {
             sorter.mergeSort(arrParaMerge);
             sorter.mergeSort(arrParaMerge);
 
+            Integer[] arrParaQuick = arr.clone();
+            sorter.quickSort(arrParaQuick);
+            sorter.quickSort(arrParaQuick);
+
             System.out.println("Ordenamiento terminado.");
 
         } catch (IOException e) {

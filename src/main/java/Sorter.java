@@ -41,7 +41,7 @@ public class Sorter {
         if (left < right) {
             int mid = left + (right - left) / 2;
 
-            mergeSort(arr, left, mid); //divide los subarreglos hasta que tengan 1 elemento
+            mergeSort(arr, left, mid);
             mergeSort(arr, mid+1, right);
 
             merge(arr, left, mid, right);
@@ -49,7 +49,7 @@ public class Sorter {
     }
 
     private <T extends Comparable<T>> void merge(T[] arr, int left, int mid, int right) {
-        int n1 = mid - left +1; //tamaños de los subarreglos
+        int n1 = mid - left +1;
         int n2 = right - mid;
 
         T[] L = (T[]) new Comparable[n1];
@@ -87,5 +87,43 @@ public class Sorter {
             k++;
         }
 
+    }
+
+    public <T extends Comparable<T>> void quickSort(T[] arr) {
+        if (arr == null || arr.length <= 1) {
+            return;
+        }
+        quickSort(arr, 0, arr.length -1);
+    }
+
+    private <T extends Comparable<T>> void quickSort(T[] arr, int low, int high) {
+        if (low < high) {
+            int pivotIndex = partition(arr, low, high);
+
+            quickSort(arr, low, pivotIndex - 1);
+            quickSort(arr, pivotIndex + 1, high);
+        }
+    }
+
+    private <T extends Comparable<T>> int partition(T[] arr, int low, int high) {
+        T pivot = arr[high];
+        int i = low - 1;
+
+        for (int j = low; j < high; j++) {
+            if (arr[j].compareTo(pivot) <= 0) {
+                i++;
+
+                T temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+
+                return i + 1;
+            }
+        }
+
+        T temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+        return i + 1;
     }
 }
