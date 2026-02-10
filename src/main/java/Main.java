@@ -44,6 +44,14 @@ public class Main {
             sorter.quickSort(arrParaQuick);
             sorter.quickSort(arrParaQuick);
 
+            Integer[] arrRadix = arr.clone();
+            int[] arrParaRadix = new int[pos];
+            for (int i = 0; i < pos; i++) {
+                arrParaRadix[i] = arrRadix[i];
+            }
+            sorter.radixSort(arrParaRadix);
+            sorter.radixSort(arrParaRadix);
+
             System.out.println("Ordenamiento terminado.");
 
         } catch (IOException e) {
