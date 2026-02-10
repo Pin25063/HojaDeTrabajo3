@@ -1,3 +1,11 @@
+/**
+ * Clase con métodos sort
+ *
+ * Para cada método:
+ * @pre los métodos reciben arreglos (el tipo depende del tipo de arreglo)
+ * @post los arreglos proporcionados quedan ordenados
+ */
+
 public class Sorter {
 
     public <T extends Comparable<T>> void gnomeSort(T[] arr) {

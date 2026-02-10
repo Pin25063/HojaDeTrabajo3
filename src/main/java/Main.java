@@ -2,6 +2,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * Clase principal del programa
+ *
+ * Genera el array con números para ser ordenados o los lee de un archivo
+ * Aplica 5 sorts diferentes al mismo array
+ *
+ */
 public class Main {
 
     public static void main(String[] args) {

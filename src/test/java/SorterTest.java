@@ -2,6 +2,15 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 
+/**
+ * Clase de pruebas unitarias para la clase Sorter
+ *
+ * Verifica el funcionamiento adecuado de cada uno de los métodos sort
+ *
+ * @pre instancia de Sorter
+ * @post cada prueba valida que los arreglos queden ordenados correctamente de forma ascendiente
+ */
+
 public class SorterTest {
 
     private Sorter sorter;
